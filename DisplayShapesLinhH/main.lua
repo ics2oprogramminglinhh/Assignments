@@ -26,13 +26,20 @@ local verticesT = {150, 112, -45, 112, 65, 43}
 local triangleText
 
 local myParallelogram
-local verticesP = {-105, -108, 185, -108, 259, 51, -19, 51}
+local verticesG = {-105, -108, 185, -108, 259, 51, -19, 51}
 local parallelogramText
 
 local myHexagon
-local verticesH = {-200, 300, 200, 300, -400, 450, 400,-450, -500, -650, 500, -650}      
+local verticesH = {600, 463, 500, 463, 450, 550, 500, 637, 600, 637, 650, 550}     
 local hexagonText
 
+local myPentagon
+local verticesP = {550, 450, 455, 519, 491, 631, 609, 631, 645, 519}
+local pentagonText
+
+local myOctogon
+local verticesO = {588, 458, 512, 458, 458, 512, 458, 588, 512, 642, 588, 642, 642, 588, 642, 512}
+local octogonText 
 -----------------------------------------------------------------------------------------
 -- TRIANGLE 
 -----------------------------------------------------------------------------------------
@@ -60,7 +67,7 @@ triangleText:setTextColor(0/255, 30/255, 108/255)
 -----------------------------------------------------------------------------------------
 
 -- Drawing my parallelogram
-local myParallelogram = display.newPolygon(350, 350, verticesP)
+local myParallelogram = display.newPolygon(350, 350, verticesG)
 
 -- Set the colour of the parallelogram
 myParallelogram:setStrokeColor(1,1,1)
@@ -72,7 +79,7 @@ myParallelogram.strokeWidth = 6
 myParallelogram:setFillColor(0.8, 0, 0)
 
 -- Display the name of the shape below it
-parallelogramText = display.newText("parallelogram", 380, 470, Arial, 40)
+parallelogramText = display.newText("Parallelogram", 380, 470, Arial, 40)
 
 -- Set text colour
 parallelogramText:setTextColor(255/255, 10/255, 0/255)
@@ -82,7 +89,7 @@ parallelogramText:setTextColor(255/255, 10/255, 0/255)
 -----------------------------------------------------------------------------------------
 
 -- Drawing my Hexagon
-local myHexagon = display.newPolygon(500, 350, verticesH)
+local myHexagon = display.newPolygon(650, 350, verticesH)
 
 -- Set the colour of the Hexagon
 myHexagon:setStrokeColor(1,1,1)
@@ -94,43 +101,60 @@ myHexagon.strokeWidth = 6
 myHexagon:setFillColor(0, .8 , 0)
 
 -- Display the name of the shape below it
-hexagonText = display.newText("Hexagon", 670, 470, Arial, 40)
+hexagonText = display.newText("Hexagon", 650, 470, Arial, 40)
 
 -- Set text colour
-hexagonText:setTextColor(104/255, 61/255, 244/255)
-
-
-
-
-
-
-
-
-
-
-
-
-
------------------------------------------------------------------------------------------
--- TEXT OBJECTS
------------------------------------------------------------------------------------------
-
--- set text colour of the triangle
-
-
--- draw the triangle (vertices)
-
--- set the width of the border
+hexagonText:setTextColor(46/255, 139/255, 87/255)
 
 -----------------------------------------------------------------------------------------
 -- EXTRA FUNCTIONS
 -----------------------------------------------------------------------------------------
 
--- Additional shape
+-- Drawing my Pentagon
+local myPentagon = display.newPolygon(880, 350, verticesP)
+
+-- Set the colour of the Pentagon
+myPentagon:setStrokeColor(1,1,1)
+
+-- Set the width of the border
+myPentagon.strokeWidth = 6
+
+-- Set the colour of the border
+myPentagon:setFillColor(.9, 0 , 1)
+
+-- Display the name of the shape below it
+pentagonText = display.newText("Pentagon", 880, 470, Arial, 40)
+
+-- Set text colour
+pentagonText:setTextColor(249/255, 102/255, 204/255)
+
+----------------------------------------------------------------------------------------
+
+-- Drawing my Octogon
+local myOctogon = display.newPolygon(500, 600, verticesO)
+
+-- Set the colour of the Octogon
+myOctogon:setStrokeColor(1,1,1)
+
+-- Set the width of the border
+myOctogon.strokeWidth = 6
+
+-- Set the colour of the border
+myOctogon:setFillColor(0.4, 0 , 1)
+
+-- Display the name of the shape below it
+octogonText = display.newText("Octogon", 500, 730, Arial, 40)
+
+-- Set text colour
+octogonText:setTextColor(107/255, 63/255, 160/255)
+
+
+----------------------------------------------------------------------------------------
 
 -- Display the area of triangle
 
--- Inserted an image into 4th shape
+-- Inserted an image into triangle
+
 
 -- Gradient fill to 1st shape
 
