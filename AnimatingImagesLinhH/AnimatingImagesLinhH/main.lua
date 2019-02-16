@@ -22,10 +22,10 @@ local speech = display.newImageRect("Images/speech.png", 600, 300)
 local background = audio.loadSound("Sound/background.mp3")
 local backgroundChannel
 
--- load physics 
+-- Load physics 
 local physics = require("physics")
 
--- start physics
+-- Start physics
 physics.start()
 
 -- Global Variables
@@ -33,7 +33,7 @@ scrollSpeed = -4
 planeSpeed = 3
 runSpeed = 2
 
--- Play background music 
+-- play background music 
 backgroundChannel = audio.play(background)
 
 ----------------------------------------------------------------------------------------
@@ -83,10 +83,10 @@ Runtime:addEventListener("enterFrame", MoveBird)
 balloon.x = 900
 balloon.y = 600
 
--- set the balloon to be transparent
+-- Set the balloon to be transparent
 balloon.alpha = 100
 
--- set the directino of the balloon
+-- Set the direction of the balloon
 balloon:scale(-1, 1)
 
 -- Function: MoveBalloon
@@ -198,7 +198,7 @@ physics.addBody(wall, "static", {friction=0.5, bounce=0.3})
 
 ------------------------------------------------------------------------
 
--- creating the first ball
+-- Creating the first ball
 local function firstBall()
 	-- creating first ball 
 	local ball1 = display.newImage("Physics/super_ball.png", 0, 0)
@@ -210,7 +210,7 @@ local function firstBall()
 	ball1:scale(1, 1)
 end
 
--- creating the second ball
+-- Creating the second ball
 local function secondBall()
 	-- creating second ball
 	local ball2 = display.newImage("Physics/super_ball.png", 0, 0)
