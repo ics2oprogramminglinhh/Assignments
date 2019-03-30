@@ -340,6 +340,3 @@ UpdateTime()
 
 -- call the function to start timer
 StartTimer()
-
-
-
