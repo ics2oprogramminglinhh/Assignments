@@ -117,7 +117,7 @@ end
  	squareRoot = randomNumber4 * randomNumber4
  	correctAnswer = math.sqrt(squareRoot)
  	-- create question in text object
- 	questionObject.text = squareRoot .. "sqrt"
+ 	questionObject.text = "√" .. squareRoot
 
  	--otherwise, if the random operator is 6, do exponents
  elseif (randomOperator == 6) then
@@ -129,7 +129,6 @@ end
 
  -- if the random operator is 7, do factorial
  if (randomOperator == 7) then
- 
  	-- calculate the correct answer
  	if (randomNumber7 == 1) then
  	correctAnswer = 1
@@ -256,6 +255,7 @@ local function UpdateTime()
 			audio.setVolume(0.3)
 			numericField.isVisible = false
 			clockText.isVisible = false
+			timer.cancel(countDownTimer)
 		end
 	end
 end
