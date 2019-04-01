@@ -23,6 +23,7 @@ local randomNumber3
 local randomNumber4
 local randomNumber5
 local randomNumber6
+local randomNumber7
 local userAnswer
 local correctAnswer
 local correctText
