@@ -22,31 +22,51 @@ local topLeft = display.newImageRect("Images/topleft.png", 200, 200)
 local topRight = display.newImageRect("Images/topright.png", 200, 200)
 local botLeft = display.newImageRect("Images/botleft.png", 200, 200)
 local botRight = display.newImageRect("Images/botright.png", 200, 200)
-local logo = display.newImageRect("Images/logo.png", 600, 600)
-
+local whooshSound = audio.loadSound("Sounds/whoosh.mp3")
+local whooshChannel
 
 ---------------------------------------------------------------------------------------
+--                                Positions and Transitions
+---------------------------------------------------------------------------------------
 
--- set the logo to be invisible
-logo.isVisible = false
-botLeft.isVisible = true
-botRight.isVisible = true
-topLeft.isVisible = true
-topRight.isVisible = true
--- set the initial x and y position of topLeft, topRight, botLeft, botRight, logo
+-- play the whoosh sound
+local whoosh = audio.play(whooshSound)
+
+-- set the initial x and y position of topLeft
 topLeft.x = 400
-topLeft.y = 300
+topLeft.y = -1000
 
-topRight.x = 600
-topRight.y = 300
+-- Transitions the topLeft image to the center
+transition.to(topLeft, {x=400, y=300, time=500})
 
+-- set the initial x and y position of topRight
+topRight.x = 1000
+topRight.y = -1000
+
+-- Transitions the topRight image to the center
+transition.to(topRight, {x=600, y=300, time=500})
+
+-- set the initial x and y position of botLeft
 botLeft.x = 400
-botLeft.y = 500
+botLeft.y = 1000
 
-botRight.x = 600
-botRight.y = 500
-logo.x = 500
-logo.y = 400
+-- Transitions the botLeft image to the center
+transition.to(botLeft, {x=400, y=500, time=500})
+
+-- set the initial x and y position of botRight
+botRight.x = 1000
+botRight.y = 1000
+
+-- Transitions the botRight image to the center
+transition.to(botRight, {x=600, y=500, time=500})
+
+
+
+
+
+                       
+
+
 
 
 
