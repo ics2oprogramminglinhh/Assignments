@@ -86,7 +86,7 @@ paws.x = 550
 paws.y = 500
 
 -- move the paws to right
-transition.to(paws, {x= 700, y=400, time= 9000})
+transition.to(paws, {x= 700, y=400, time= 2500})
 
 -- set the x and y position of sparkles
 sparkle.x = 300
@@ -111,6 +111,8 @@ sparkle:scale(3,3)
 
 -- rotate the sparkle
 sparkle:rotate(-40)
+
+-- send to the back of logo
 sparkle:toBack()
 
 --send to the back of logo
